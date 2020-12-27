@@ -2,7 +2,7 @@
 # http://git-scm.com/docs/gitignore
 
 *~
-set_env.sh
+*.sh
 *.sw[mnpcod]
 *.log
 *.tmp
