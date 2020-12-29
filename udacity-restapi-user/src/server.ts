@@ -1,3 +1,4 @@
+require('dotenv').config();
 import express from 'express';
 import { sequelize } from './sequelize';
 
@@ -41,3 +42,9 @@ const c = config.dev;
       console.log( `press CTRL+C to stop server` );
   } );
 })();
+
+
+
+
+
+
