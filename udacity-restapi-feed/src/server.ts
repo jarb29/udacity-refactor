@@ -39,4 +39,6 @@ const c = config.dev;
       console.log( `server running ` + c.url );
       console.log( `press CTRL+C to stop server` );
   } );
-})();
+}
+
+)();
