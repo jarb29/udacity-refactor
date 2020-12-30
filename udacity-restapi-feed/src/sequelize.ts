@@ -3,6 +3,7 @@ import { config } from './config/config';
 
 
 const c = config.dev;
+console.log(c, "deberia ser todo el archivo")
 
 // Instantiate new Sequelize instance!
 export const sequelize = new Sequelize({

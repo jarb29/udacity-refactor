@@ -1,4 +1,5 @@
 import {Sequelize} from 'sequelize-typescript';
+// require('dotenv').config();
 import { config } from './config/config';
 
 
