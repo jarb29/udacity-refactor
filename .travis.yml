@@ -19,15 +19,15 @@ install:
   - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml build --parallel
 
 
-# after_success:
-#   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
-#   - docker tag udacity-reverseproxy jarb29/refactor_udagram_front:udacity-reverseproxy
-#   - docker tag udacity-restapi-user jarb29/refactor_udagram_front:udacity-restapi-user
-#   - docker tag udacity-restapi-feed jarb29/refactor_udagram_front:udacity-restapi-feed
-#   - docker tag udacity-frontend jarb29/refactor_udagram_front:udacity-frontend
+  - docker tag udacity-reverseproxy jarb29/udacity-reverseproxy
+  - docker tag udacity-restapi-user jarb29/udacity-restapi-user
+  - docker tag udacity-restapi-feed jarb29/udacity-restapi-feed 
+  - docker tag udacity-frontend jarb29/udacity-frontend
 
-#   - docker push jarb29/refactor_udagram_front:udacity-reverseproxy
-#   - docker push jarb29/refactor_udagram_front:udacity-restapi-user 
-#   - docker push jarb29/refactor_udagram_front:udacity-restapi-feed 
-#   - docker push jarb29/refactor_udagram_front:udacity-frontend
+  - docker push jarb29/udacity-reverseproxy
+  - docker push jarb29/udacity-restapi-user
+  - docker push jarb29/udacity-restapi-feed 
+  - docker push jarb29/udacity-frontend

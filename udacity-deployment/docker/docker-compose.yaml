@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-    image: jarb29/udacity-reverseproxy
+    image: udacity-reverseproxy
     ports:
       - 8080:8080
     restart: always
@@ -9,7 +9,7 @@ services:
       - backend-user
       - backend-feed
   backend-user:
-    image: jarb29/udacity-restapi-user
+    image: udacity-restapi-user
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -23,7 +23,7 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   backend-feed:
-    image: jarb29/udacity-restapi-feed
+    image: udacity-restapi-feed
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -37,6 +37,6 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   frontend:
-    image: jarb29/udacity-frontend:prod
+    image: udacity-frontend:prod
     ports:
       - "8100:80"
