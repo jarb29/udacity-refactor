@@ -17,3 +17,8 @@ before_install:
 
 install:
   - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml build --parallel
+
+
+  after_success:
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - docker push docker push jarb29/refactor_udagram_front:tagname
