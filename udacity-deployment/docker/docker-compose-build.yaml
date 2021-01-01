@@ -3,16 +3,16 @@ services:
   reverseproxy:
     build:
       context: .
-    image: udacity-reverseproxy
+    image: jarb29/udacity-reverseproxy
   backend_user:
     build:
       context: ../../udacity-restapi-user
-    image: udacity-restapi-user
+    image: jarb29/udacity-restapi-user
   backend_feed:
     build:
       context: ../../udacity-restapi-feed
-    image: udacity-restapi-feed
+    image: jarb29/udacity-restapi-feed
   frontend:
     build:
       context: ../../udacity-frontend
-    image: udacity-frontend:prod
+    image: jarb29/udacity-frontend:prod
