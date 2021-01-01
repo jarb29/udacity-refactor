@@ -15,4 +15,4 @@ services:
   frontend:
     build:
       context: ../../udacity-frontend
-    image: jarb29/udacity-frontend:local
+    image: jarb29/udacity-frontend:prod
