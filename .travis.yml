@@ -25,7 +25,7 @@ after_success:
   - docker tag udacity-reverseproxy jarb29/udacity-reverseproxy
   - docker tag udacity-restapi-user jarb29/udacity-restapi-user
   - docker tag udacity-restapi-feed jarb29/udacity-restapi-feed 
-  - docker tag udacity-frontend jarb29/udacity-frontend
+  - docker tag udacity-frontend:prod jarb29/udacity-frontend
 
   - docker push jarb29/udacity-reverseproxy
   - docker push jarb29/udacity-restapi-user
