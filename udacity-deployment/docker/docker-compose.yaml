@@ -39,4 +39,4 @@ services:
   frontend:
     image: udacity-frontend:prod
     ports:
-      - "8100:80"
+      - "8100:80" 
