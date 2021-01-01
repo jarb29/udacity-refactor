@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-        - image: pdjordaan/udacity-reverseproxy
+        - image: jarb29/udacity-reverseproxy
           name: reverseproxy
           imagePullPolicy: Always
           resources:
