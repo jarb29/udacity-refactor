@@ -57,4 +57,4 @@ spec:
       #           secretKeyRef:
       #             name: env-secret
       #             key: POSTGRESS_USERNAME
-      # restartPolicy: Always
+      restartPolicy: Always
