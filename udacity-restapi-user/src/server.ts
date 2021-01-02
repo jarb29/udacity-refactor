@@ -7,13 +7,15 @@ import { IndexRouter } from './controllers/v0/index.router';
 import bodyParser from 'body-parser';
 import { config } from './config/config';
 
-import { V0MODELS } from './controllers/v0/model.index';
+import { V0USER  } from './controllers/v0/model.index';
 
 const c = config.dev;
 
 
 (async () => {
-  await sequelize.addModels(V0MODELS);
+  try {
+
+  await sequelize.addModels(V0USER);
   await sequelize.sync();
 
   const app = express();
@@ -41,7 +43,18 @@ const c = config.dev;
       console.log( `server running `+ c.url );
       console.log( `press CTRL+C to stop server` );
   } );
-})();
+
+
+
+}
+catch(e) {console.log(e, c.url, c.username, "EN EL SERVER")
+}
+}
+
+)();
+
+
+
 
 
 

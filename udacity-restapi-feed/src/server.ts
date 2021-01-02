@@ -6,14 +6,14 @@ import { IndexRouter } from './controllers/v0/index.router';
 
 import bodyParser from 'body-parser';
 import { config } from './config/config';
-import { V0MODELS } from './controllers/v0/model.index';
+import { V0FEED } from './controllers/v0/model.index';
 
 const c = config.dev;
 
 (async () => {
 
   try {
-    await sequelize.addModels(V0MODELS);
+    await sequelize.addModels(V0FEED);
     await sequelize.sync();
 
     const app = express();
